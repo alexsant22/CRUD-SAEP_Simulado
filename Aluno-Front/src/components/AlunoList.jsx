@@ -10,6 +10,7 @@ export default function AlunoList({ alunos, onEdit, onDelete }) {
             <th>Nome</th>
             <th>CPF</th>
             <th>Email</th>
+            <th>Telefone</th>
             <th>Turma</th>
             <th>Ações</th>
           </tr>
@@ -20,6 +21,7 @@ export default function AlunoList({ alunos, onEdit, onDelete }) {
               <td>{aluno.nome}</td>
               <td>{aluno.cpf}</td>
               <td>{aluno.email}</td>
+              <td>{aluno.telefone}</td>
               <td>{aluno.turma}</td>
               <td>
                 <button onClick={() => onEdit(aluno)}>Editar</button>

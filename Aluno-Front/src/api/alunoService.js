@@ -30,6 +30,16 @@ export const getAlunoByCpf = async (cpf) => {
   }
 };
 
+// Função para buscar aluno por ID
+export const getAlunoById = async (id) => {
+  try {
+    const response = await apiClient.get(`/buscar/${id}`);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data || "Erro ao buscar aluno por ID");
+  }
+};
+
 // Função para criar um novo aluno
 export const createAluno = async (aluno) => {
   try {
